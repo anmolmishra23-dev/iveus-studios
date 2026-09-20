@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@source "../dist/*.html";
+@source "../dist/*.js";
+@theme {
+  --color-ink: #10110f;
+  --color-gold: #c9a564;
+  --color-paper: #f4f0e8;
+  --font-sans: "Manrope", Arial, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
