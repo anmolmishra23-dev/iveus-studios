@@ -1,0 +1,13 @@
+{
+  "name": "iveus-studios",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify && node scripts/copy-vendor.mjs",
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "tailwindcss": "4.1.13", "@tailwindcss/cli": "4.1.13" }
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Iveus Studios — model portfolios, brand campaigns and product photography. Explore the work and discuss your next shoot.">
+  <meta property="og:title" content="Iveus Studios — Made to be seen">
+  <meta property="og:description" content="Models. Brands. Products. Photography with a point of view.">
+  <meta property="og:type" content="website">
+  <title>Iveus Studios — Made to be seen</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310110f'/%3E%3Ctext x='32' y='48' text-anchor='middle' fill='%23c9a564' font-family='Georgia' font-size='56'%3Ei%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./tailwind.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body class="bg-ink text-paper antialiased">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header flex items-center justify-between" id="header">
+  <a href="#home" aria-label="Iveus Studios home" class="brand"><span class="logo-window"><img src="./assets/iveus-logo.jpeg" alt="Iveus" width="1172" height="780"></span><span class="brand-sub">STUDIOS</span></a>
+  <nav class="desktop-nav hidden md:flex items-center gap-9" aria-label="Main navigation">
+    <a href="#work">The work</a><a href="#approach">The approach</a><a href="#about">Behind the lens</a>
+  </nav>
+  <a class="header-enquire hidden md:inline-flex items-center gap-6" href="#contact">Let’s create <span aria-hidden="true">↗</span></a>
+  <button class="menu-toggle md:hidden" id="menu-toggle" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<dialog class="mobile-menu" id="mobile-menu" aria-label="Navigation">
+  <div class="mobile-menu-top flex justify-between items-center"><span class="eyebrow">IVEUS STUDIOS</span><button class="icon-button" data-close-menu aria-label="Close menu">✕</button></div>
+  <nav class="flex flex-col" aria-label="Mobile navigation"><a href="#work">The work</a><a href="#approach">The approach</a><a href="#about">Behind the lens</a><a href="#contact">Let’s connect</a></nav>
+  <p>For people and brands with something to say.</p>
+</dialog>
+<main id="main">
+  <section class="hero relative overflow-hidden" id="home" aria-label="Iveus Studios introduction">
+    <img id="hero-image" class="hero-photo" src="./assets/hero.jpg" alt="" width="1920" height="1280" fetchpriority="high">
+    <div id="hero-canvas" class="hero-canvas" aria-hidden="true"></div><div class="hero-shade"></div>
+    <div class="hero-topline flex items-center justify-between"><span class="eyebrow">MODELS · BRANDS · PRODUCTS</span><span class="hero-issue">Photography with a point of view.</span></div>
+    <div class="hero-copy"><p class="eyebrow hero-kicker">A DISTINCTIVE WAY TO BE SEEN</p><h1>Made to<br>be <em>seen.</em></h1><div class="hero-bottom flex flex-col md:flex-row md:items-end justify-between gap-8"><a class="line-link" href="#work">Explore the work <span aria-hidden="true">↗</span></a><p>Model portfolios. Brand stories.<br> Products with presence.<br> Images that speak for themselves.</p></div></div>
+    <div class="hero-controls flex items-center justify-between"><a href="#intro" class="scroll-hint">DISCOVER THE STUDIO <span aria-hidden="true">↓</span></a><div class="flex items-center gap-5"><span id="slide-number" class="slide-number" aria-live="polite">01 / 03</span><button class="slide-dot is-active" data-slide="0" aria-label="View photograph 1" aria-pressed="true"></button><button class="slide-dot" data-slide="1" aria-label="View photograph 2" aria-pressed="false"></button><button class="slide-dot" data-slide="2" aria-label="View photograph 3" aria-pressed="false"></button><button class="motion-toggle" id="motion-toggle" hidden aria-label="Pause ambient motion" aria-pressed="false">Pause motion</button></div></div>
+  </section>
+  <section id="intro" class="intro section-pad text-center">
+    <p class="eyebrow gold reveal">GOOD IMAGES GET NOTICED. GREAT ONES SAY SOMETHING.</p>
+    <h2 class="intro-title reveal">Your vision.<br>A different <em>point of view.</em></h2>
+    <p class="intro-body reveal">A face with a story. A brand with a purpose. A product worth a closer look. We bring light, detail and intention together to create images that feel unmistakably yours.</p>
+    <span class="intro-rule" aria-hidden="true"></span>
+  </section>
+  <section class="collections section-pad" id="work">
+    <div class="section-heading flex flex-col md:flex-row justify-between md:items-end gap-6 reveal"><div><p class="eyebrow">01 / SELECTED WORK</p><h2>Work with <em>presence.</em></h2></div><p>People. Products. Perspective.<br>See what’s possible.</p></div>
+    <div class="collection-toolbar flex flex-col sm:flex-row sm:items-center justify-between gap-4"><div id="filters" class="filters flex flex-wrap gap-2" role="group" aria-label="Filter work"><button class="filter is-active" data-filter="all" aria-pressed="true">All work <span>08</span></button><button class="filter" data-filter="models" aria-pressed="false">Models</button><button class="filter" data-filter="brands" aria-pressed="false">Brands</button><button class="filter" data-filter="products" aria-pressed="false">Products</button><button class="filter" data-filter="weddings" aria-pressed="false">Weddings</button></div><span class="collection-count" id="collection-count" aria-live="polite">8 photographs</span></div>
+    <div id="gallery" class="gallery-grid"></div>
+    <noscript><p>Enable JavaScript to explore the interactive collections. You can still view the featured photograph and read about Iveus.</p></noscript>
+    <p class="demo-note" id="demo-note">Visual direction preview · Photographs sourced from independent artists, not Iveus client work. <button id="open-credits" class="text-link">Photo credits</button></p>
+  </section>
+  <section class="approach section-pad" id="approach">
+    <div class="approach-heading reveal"><p class="eyebrow gold">02 / THE APPROACH</p><h2>A clear idea.<br>A striking <em>image.</em></h2><p>From the first reference to the final frame,<br>every detail has a reason to be there.</p></div>
+    <div class="process-grid grid md:grid-cols-3 gap-8 md:gap-12">
+      <article class="process-step reveal"><span class="step-number">01</span><h3>First, the vision.</h3><p>We start with your brief. The look, the audience and where the images will live — a portfolio, a campaign, a product page or something entirely new.</p></article>
+      <article class="process-step reveal"><span class="step-number">02</span><h3>Then, the shoot.</h3><p>Light, composition and considered direction. We make room to experiment while keeping your visual direction at the centre of the shoot.</p></article>
+      <article class="process-step reveal"><span class="step-number">03</span><h3>Finally, the details.</h3><p>A thoughtful edit and a consistent finish. We agree on the final selections, retouching and image formats around how you plan to use them.</p></article>
+    </div>
+  </section>
+  <section id="about" class="about-section grid md:grid-cols-2">
+    <div class="about-image-wrap overflow-hidden"><img src="./assets/about.jpg" alt="A fashion model in a lavender suit photographed on sand dunes" loading="lazy" width="1000" height="1300"><span class="image-label">A CLOSER LOOK. A STRONGER IMAGE.</span></div>
+    <div class="about-copy flex flex-col justify-center"><p class="eyebrow gold reveal">03 / BEHIND THE LENS</p><h2 class="reveal">The eye behind<br>the <em>image.</em></h2><p class="reveal">Iveus Studios photographs people, products and the brands they build. The work sits where a clear idea meets a fresh perspective.</p><p class="reveal">From a model’s first portfolio to a brand’s next campaign, the aim is the same: create photographs with personality, precision and purpose. And when the brief is a wedding, bring that same eye to a more personal story.</p><a class="line-link reveal" href="#contact">Let’s talk about your shoot <span aria-hidden="true">↗</span></a></div>
+  </section>
+  <section class="contact section-pad" id="contact">
+    <div class="contact-intro"><p class="eyebrow gold reveal">YOUR NEXT IDEA STARTS HERE</p><h2 class="reveal">Have a vision?<br>Let’s make<br>it <em>visible.</em></h2><p class="reveal">A model portfolio, a campaign, a product launch or a wedding. Tell us what you have in mind — we’ll take it from there.</p><div id="direct-contact" class="direct-contact"></div></div>
+    <form id="enquiry-form" class="enquiry-form" aria-label="Shoot enquiry">
+      <div class="grid sm:grid-cols-2 gap-6"><label>Your name <span aria-hidden="true">*</span><input name="name" autocomplete="name" placeholder="A name to say hello to" maxlength="100" required></label><label>Email address <span aria-hidden="true">*</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></label></div>
+      <div class="grid sm:grid-cols-2 gap-6"><label>What are we creating?<select name="session"><option>Model portfolio</option><option>Brand campaign</option><option>Product shoot</option><option>Wedding</option><option>Something else</option></select></label><label>A date in mind<input name="date" type="date" aria-label="Preferred session date"></label></div>
+      <label>Shoot location<input name="location" autocomplete="address-level2" placeholder="City, studio or location" maxlength="200"></label>
+      <label>Tell us about the brief<textarea name="message" rows="3" maxlength="2500" placeholder="Your concept, products, mood, intended use and any references…"></textarea></label>
+      <p class="form-note" id="form-note">Prepare your enquiry, then choose how to share it. Nothing is sent automatically.</p>
+      <button class="enquire-button flex items-center justify-between" type="submit"><span id="enquiry-label">Prepare my enquiry</span><span aria-hidden="true">↗</span></button>
+    </form>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-top flex flex-col sm:flex-row justify-between gap-6"><a href="#home" class="footer-wordmark" aria-label="Iveus, back to top">iveus<span>STUDIOS</span></a><p>For people and brands<br>with something to say.</p><a class="back-top" href="#home">BACK TO THE TOP ↑</a></div><div class="footer-bottom flex flex-col sm:flex-row justify-between gap-3"><span>© <span id="year">2026</span> Iveus Studios</span><span>MODELS · BRANDS · PRODUCTS</span><button class="text-link" id="privacy-open">Privacy</button></div></footer>
+<dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-top flex justify-between items-center"><span class="eyebrow" id="lightbox-count">01 / 08</span><button class="icon-button" data-close="lightbox" aria-label="Close photograph">✕</button></div><div class="lightbox-stage"><button class="lightbox-arrow previous" id="photo-prev" aria-label="Previous photograph">←</button><img id="lightbox-image" src="./assets/hero.jpg" alt="" width="1600" height="1200"><button class="lightbox-arrow next" id="photo-next" aria-label="Next photograph">→</button></div><div class="lightbox-caption"><div><h2 id="lightbox-title"></h2><p id="lightbox-subtitle"></p></div><a id="lightbox-credit" target="_blank" rel="noopener noreferrer">Photo credit ↗</a></div><p class="lightbox-hint">Use ← → to explore · Esc to close</p></dialog>
+<dialog id="enquiry-dialog" class="content-dialog" aria-labelledby="enquiry-title"><button class="icon-button dialog-close" data-close="enquiry-dialog" aria-label="Close enquiry">✕</button><p class="eyebrow gold">LET’S BRING IT TO LIFE</p><h2 id="enquiry-title">Your next <em>shoot.</em></h2><p id="enquiry-status">Your enquiry is ready. It has not been sent.</p><pre id="enquiry-summary"></pre><div class="dialog-actions flex flex-wrap gap-3"><a id="email-enquiry" class="gold-button" hidden>Open email</a><a id="whatsapp-enquiry" class="gold-button" target="_blank" rel="noopener noreferrer" hidden>Open WhatsApp</a><button id="copy-enquiry" class="outline-button">Copy enquiry</button><button id="download-enquiry" class="outline-button">Download enquiry</button></div><p id="enquiry-feedback" role="status"></p></dialog>
+<dialog id="info-dialog" class="content-dialog" aria-labelledby="info-title"><button class="icon-button dialog-close" data-close="info-dialog" aria-label="Close information">✕</button><p class="eyebrow gold">IVEUS STUDIOS</p><h2 id="info-title"></h2><div id="info-content"></div></dialog>
+</body>
+</html>
